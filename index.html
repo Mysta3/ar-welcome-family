@@ -12,9 +12,12 @@
       <a-assets>
         <a-asset-item id="optimerBoldFont"
           src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
-      </a-assets>
 
-      <a-marker preset="kanji">
+          
+      </a-assets>
+      
+
+      <a-marker type="pattern" url="./choz3nFam_marker_image.png">
         <a-entity>
           <a-animation
             attribute="rotation"
@@ -29,6 +32,8 @@
               <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
                 
             </a-entity> -->
+
+           
 
             <a-entity rotation="">
               <a-entity material="color: orange; src: #texture" position=" -2 2 1" text-geometry="value: Welcome; font: #optimerBoldFont"></a-entity>
