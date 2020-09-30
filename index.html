@@ -17,37 +17,37 @@
       </a-assets>
       
 
-      <a-marker type="pattern" url="./choz3nFam_marker_image.png">
-        <a-entity>
-          <a-animation
+      <a-marker preset="kanji">
+        <!-- TRY ADDING A BLACK AND WHITE MARKER -->
+
+          <!-- <a-animation
             attribute="rotation"
             dur="2000"
-            `
+            
             easing="linear"
             from="0 0 0"
             to="0 360 0"
             repeat="indefinite"
-          ></a-animation>
+          ></a-animation> -->
             <!-- <a-entity>
               <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
                 
             </a-entity> -->
-
+            <a-entity gltf-model="url(./models/thechoz3ns_model.gltf)" scale="5 5 5" position="50 150 0">
+            </a-entity>
            
 
             <a-entity rotation="">
-              <a-entity material="color: orange; src: #texture" position=" -2 2 1" text-geometry="value: Welcome; font: #optimerBoldFont"></a-entity>
+              <a-entity material="color: orange; src: #texture" position=" -2 3 -2" text-geometry="value: Welcome; font: #optimerBoldFont"></a-entity>
             </a-entity>
 
             <a-entity rotation=""">
-                <a-entity material="color: orange; src: #texture" position=" -2 1 1" text-geometry="value:Choz3nFam!; font: #optimerBoldFont"></a-entity>
+                <a-entity material="color: orange; src: #texture" position=" -2 2 -2" text-geometry="value:Choz3nFam!; font: #optimerBoldFont"></a-entity>
             </a-entity>
-            
-          
-          </a-entity>
-        </a-entity>
+      
       </a-marker>
       <a-entity camera></a-entity>
+      
     </a-scene>
   </body>
 </html>
