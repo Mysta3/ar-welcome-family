@@ -8,6 +8,8 @@
 
   <body style="margin: 0px; overflow: hidden">
     <a-scene stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
+
+      <!-- LOAD ASSETS -->
       <a-assets>
         <a-asset-item
           id="optimerBoldFont"
@@ -36,12 +38,7 @@
               <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
                 
             </a-entity> -->
-        <a-entity
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          gltf-model="#choz3nModel"
-        >
-        </a-entity>
+        <a-entity gltf-model="#choz3nModel"> </a-entity>
 
         <!-- <a-entity rotation="">
               <a-entity material="color: orange; src: #texture" position=" -2 3 -2" text-geometry="value: Welcome; font: #optimerBoldFont"></a-entity>
