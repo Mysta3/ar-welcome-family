@@ -4,23 +4,26 @@
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-  <script
-    src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
 
   <body style="margin: 0px; overflow: hidden">
     <a-scene stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
       <a-assets>
-        <a-asset-item id="optimerBoldFont"
-          src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+        <a-asset-item
+          id="optimerBoldFont"
+          src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"
+        ></a-asset-item>
 
-          
+        <a-asset-item
+          id="choz3nModel"
+          src="./models/thechoz3ns_model.gltf"
+        ></a-asset-item>
       </a-assets>
-      
 
       <a-marker preset="kanji">
         <!-- TRY ADDING A BLACK AND WHITE MARKER -->
 
-          <!-- <a-animation
+        <!-- <a-animation
             attribute="rotation"
             dur="2000"
             
@@ -29,25 +32,26 @@
             to="0 360 0"
             repeat="indefinite"
           ></a-animation> -->
-            <!-- <a-entity>
+        <!-- <a-entity>
               <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
                 
             </a-entity> -->
-            <a-entity gltf-model="url(./models/thechoz3ns_model.gltf)" scale="5 5 5" position="50 150 0">
-            </a-entity>
-           
+        <a-entity
+          position="0 0 0"
+          scale="0.05 0.05 0.05"
+          gltf-model="#choz3nModel"
+        >
+        </a-entity>
 
-            <a-entity rotation="">
+        <!-- <a-entity rotation="">
               <a-entity material="color: orange; src: #texture" position=" -2 3 -2" text-geometry="value: Welcome; font: #optimerBoldFont"></a-entity>
             </a-entity>
 
             <a-entity rotation=""">
                 <a-entity material="color: orange; src: #texture" position=" -2 2 -2" text-geometry="value:Choz3nFam!; font: #optimerBoldFont"></a-entity>
-            </a-entity>
-      
+            </a-entity> -->
       </a-marker>
       <a-entity camera></a-entity>
-      
     </a-scene>
   </body>
 </html>
