@@ -45,21 +45,19 @@
       <a-marker preset="kanji">
         <!-- TRY ADDING A BLACK AND WHITE MARKER -->
 
-        <a-animation
+        <!-- <a-animation
           attribute="rotation"
           dur="2000"
           easing="linear"
           from="0 0 0"
           to="0 360 0"
-          repeat="indefinite"
-        ></a-animation>
-        <!-- <a-entity>
+        ></a-animation> -->
+        <a-entity>
               <a-entity position="0 2.25 -15" particle-system="color: #EF0000,#44CC00"></a-entity>
-                
-            </a-entity> -->
+          </a-entity>
 
         <!-- Top Phrase -->
-        <a-entity rotation="">
+        <!-- <a-entity rotation="">
           <a-entity outline
             material="color: white; src: #texture"
             position=" -4 2 -2"
@@ -68,24 +66,24 @@
         </a-entity>
 
         <!-- Bottom Phrase -->
-        <a-entity rotation="0 5 2">
+        <!-- <a-entity rotation="0 5 2">
           <a-entity
             material=" color: white; src: #texture"
             position=" -4 1.5 -2"
             text-geometry="value:Choz3nFam!; font: #optimerBoldFont"
           ></a-entity>
-        </a-entity>
+        </a-entity> --> -->
 
         <!-- GLTF MODEL -->
-        <a-entity rotation="0 0 2">
+        
           <a-entity
-            rotation="0 -90 0"
-            position="0 -1 -4"
+            rotation="-175 90 -95"
+            position="2 0 0"
             gltf-model="#choz3nModel"
             modify-materials
           >
           </a-entity>
-        </a-entity>
+        
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
