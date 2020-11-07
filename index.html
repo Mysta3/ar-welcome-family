@@ -5,7 +5,7 @@
   <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
-
+  <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script>
   <body style="margin: 0px; overflow: hidden">
     <script>
       AFRAME.registerComponent('modify-materials', {
@@ -18,17 +18,17 @@
             // Go over the submeshes and modify materials we want.
             obj.traverse((node) => {
               if (node.name.indexOf('Torus') !== -1) {
-                node.material.color.set('#F79520');
+                node.material.color.set('#F79520'); //modify model
               }
               if (node.name.indexOf('Text') !== -1) {
-                node.material.color.set('#000000');
+                node.material.color.set('#000000'); //modify text color
               }
             });
           });
         },
       });
     </script>
-    <a-scene stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
+    <a-scene outline stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
       <!-- LOAD ASSETS -->
       <a-assets>
         <a-asset-item
