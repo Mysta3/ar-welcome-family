@@ -2,10 +2,9 @@
 <html>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
-  <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script>
   <body style="margin: 0px; overflow: hidden">
 
     <!-- ----------------------------
@@ -36,7 +35,7 @@
     <!-- ----------------------------
       //// AFRAME SCRIPT - END ////
     ----------------------------- -->
-    <a-scene outline stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
+    <a-scene stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
       <!-- LOAD ASSETS -->
       <a-assets>
         <a-asset-item
@@ -50,13 +49,15 @@
         ></a-asset-item>
       </a-assets>
 
-      <a-marker-camera type="pattern" url="https://github.com/Mysta3/ar-welcome-family/blob/gh-pages/pattern_choz3n_marker.patt">
+      <a-marker type="pattern" url="./pattern-thechoz3n_marker.patt">
         <!-- TRY ADDING A BLACK AND WHITE MARKER -->
 
   
         <a-entity>
-              <a-entity position="0 2.25 -15" particle-system="color: #ff9a00,#ffa126, #ffa83b, #ffaf4d; size:2; particle-count: 5000; preset:dust"></a-entity>
-          </a-entity>
+              <a-entity 
+              position="0 2.25 -15" 
+              particle-system="color: #ff9a00,#ffa126, #ffa83b, #ffaf4d; size:2; particle-count: 5000; preset:dust"></a-entity>
+        </a-entity>
 
         <!-- Top Phrase -->
          
@@ -85,8 +86,7 @@
             modify-materials
           >
           </a-entity>
-        
-      </a-marker-camera>
+      </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
