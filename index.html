@@ -30,6 +30,7 @@
           });
         },
       });
+
     </script>
 
     <!-- ----------------------------
@@ -50,25 +51,24 @@
       </a-assets>
 
       <a-marker type="pattern" url="./pattern-thechoz3n_marker.patt">
-        <!-- TRY ADDING A BLACK AND WHITE MARKER -->
-
-  
-        <a-entity>
-              <a-entity 
+      
+          <a-entity 
               position="0 2.25 -15" 
-              particle-system="color: #ff9a00,#ffa126, #ffa83b, #ffaf4d; size:2; particle-count: 5000; preset:dust"></a-entity>
-        </a-entity>
+              particle-system="color: #ff9a00,#ffa126, #ffa83b, #ffaf4d; size:2; particle-count: 5000; preset:dust"
+          ></a-entity>
 
+   
         <!-- Top Phrase -->
-         
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
           <a-entity
             material="color: white; src: #texture"
             position=" -1 1.5 0.010"
             rotation="-90 0 0"
             text-geometry="value: Welcome; font: #optimerBoldFont"
           ></a-entity>
+        </a-entity>
         
-
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
         <!-- Bottom Phrase -->
           <a-entity
             material=" color: white; src: #texture"
@@ -76,15 +76,19 @@
             rotation="-90 0 0"
             text-geometry="value:Choz3nFam!; font: #optimerBoldFont"
           ></a-entity>
+          </a-entity>
+
 
         <!-- GLTF MODEL -->
         
+          <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
           <a-entity
             rotation="-175 90 -95"
             position="0 0 0"
             gltf-model="#choz3nModel"
             modify-materials
           >
+          </a-entity>
           </a-entity>
       </a-marker>
       <a-entity camera></a-entity>
