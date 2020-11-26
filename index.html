@@ -5,6 +5,7 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
   <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+  <script src="https://rawgit.com/takahirox/aframe-outline/master/build/aframe-outline.min.js"></script>
   <body style="margin: 0px; overflow: hidden">
 
     <!-- ----------------------------
@@ -30,12 +31,13 @@
           });
         },
       });
+
     </script>
 
     <!-- ----------------------------
       //// AFRAME SCRIPT - END ////
     ----------------------------- -->
-    <a-scene stats embedded arjs="trackingMethod: best; debugUIEnabled: false">
+    <a-scene arjs="trackingMethod: best; debugUIEnabled: false">
       <!-- LOAD ASSETS -->
       <a-assets>
         <a-asset-item
@@ -50,42 +52,49 @@
       </a-assets>
 
       <a-marker type="pattern" url="./pattern-thechoz3n_marker.patt">
-        <!-- TRY ADDING A BLACK AND WHITE MARKER -->
-
-  
-        <a-entity>
-              <a-entity 
+      
+        <!-- <a-entity  animation="property: rotation; to: 0 360 0; loop: true; dur: 20000"> -->
+          <a-entity 
               position="0 2.25 -15" 
-              particle-system="color: #ff9a00,#ffa126, #ffa83b, #ffaf4d; size:2; particle-count: 5000; preset:dust"></a-entity>
-        </a-entity>
+              particle-system="color: #ff9a00,#ffa126, #ffa83b, #ffaf4d; size:2; particle-count: 5000; preset:star"
+          ></a-entity>
+        <!-- </a-entity> -->
 
         <!-- Top Phrase -->
-         
-          <a-entity
+        <a-entity animation="property: rotation; to: 360 360 360; loop: false; dur: 10000">
+          <a-text 
             material="color: white; src: #texture"
-            position=" -1 1.5 0.010"
+            position=" -1 1.5 0.008"
             rotation="-90 0 0"
             text-geometry="value: Welcome; font: #optimerBoldFont"
-          ></a-entity>
-        
+          ></a-text>
+        </a-entity>
 
+        <!-- MIDDLE PHRASE -->
+        <a-entity animation="property: rotation; to: 360 360 360; loop: false; dur: 10000">
+          <a-text material="color: white; src: #texture" position="-1.5 1.5 0.8" rotation="-90 0 0"
+            text-geometry="value: To The Family!; font: #optimerBoldFont"></a-text>
+        </a-entity>
+        
         <!-- Bottom Phrase -->
-          <a-entity
-            material=" color: white; src: #texture"
-            position=" -1.5 1.5 0.6"
+        <a-entity animation="property: rotation; to: 360 360 360; loop: false; dur: 10000">
+          <a-text
+            material=" color: teal; src: #texture"
+            position=" -1.5 1.5 1.6"
             rotation="-90 0 0"
-            text-geometry="value:Choz3nFam!; font: #optimerBoldFont"
-          ></a-entity>
+            text-geometry="value:#Choz3nFam; font: #optimerBoldFont"
+          ></a-text>
+        </a-entity>
 
         <!-- GLTF MODEL -->
-        
           <a-entity
             rotation="-175 90 -95"
-            position="0 0 0"
+            position="0 0 -1"
             gltf-model="#choz3nModel"
             modify-materials
           >
           </a-entity>
+       
       </a-marker>
       <a-entity camera></a-entity>
     </a-scene>
